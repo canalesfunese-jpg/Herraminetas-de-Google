@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width:767px) {
-    body {
+    .contenido{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
         grid-gap: 10px;
