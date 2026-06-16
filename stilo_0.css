@@ -10,7 +10,8 @@
 
 @media screen and (max-width:767px) {
     .contenido{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
         grid-gap: 10px;
         
