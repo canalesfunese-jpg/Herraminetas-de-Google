@@ -1,178 +1,151 @@
-@view-transition {
-    navigation: auto;
-    /* enabled! */
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation-duration: 0.7s;
-}
-
-
+/* ====== Reset básico ====== */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    background: #000000 url(tumblr_47e261d1178d7923e367060cd5924623_78612844_2048.gif );
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
 
-section .navar {
-    width: 100%;
-    height: 70px;
-    background: rgb(218, 218, 218);
-    position: fixed;
-    text-decoration: none;
-    color: black;
-    border: 10px groove rgb(255, 255, 255);
+/* ====== Navbar ====== */
+.navar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 10px;
 }
 
-
-
-
-body .navar ol li {
-
-    padding: 7px;
-    text-decoration: none;
-    margin: -1px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 300;
-    background: rgba(155, 155, 155, 0.3);
-    list-style: none;
-    text-align: center;
-    display: inline-block;
-    border-radius: 20px;
-    border-radius: 20px;
-    transition: 0.3s;
-
+.navar img {
+  max-height: 60px;
+  margin-right: 10px;
 }
 
-body .navar :hover {
-    box-shadow: 10px 4px 10px rgba(190, 22, 245, 0.3);
-    transform: translateY(-5px);
-
+.navar ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-body .navar ol li a {
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
-
+.navar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-
-
-
-body .navar ol li a:hover,
-body .navar .pag-actual {
-    box-shadow: red;
-
-    text-decoration: none;
-    width: 100%;
-    background: #fafafa;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-    width: 100px;
+.navar li a.pag-actual {
+  color: #007bff;
 }
 
-body #holaaaa {
-    width: 100%;
-    height: 80px;
-    background: #000000 url(tumblr_47e261d1178d7923e367060cd5924623_78612844_2048.gif );
+/* ====== Banner ====== */
+#baner img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-
-header #baner {
-    width: 800px;
-    height: 250px;
-    margin: 10px auto 100px auto;
-    box-shadow: 0 0 10px rgb(0, 17, 250);
-    background-color: rgba(255, 24, 24, 0.3);
-}
-
-header #baner figure #imgbaner {
-    overflow: hidden;
-    width: 100%;
-    height: 300px;
-    background: url(R.gif);
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgb(59, 47, 118);
-    background-color: rgba(45, 0, 244, 0.3);
-}
-
-article {
-    box-shadow: 0 0 20px rgb(132, 128, 219);
-    background-color: rgba(190, 22, 245, 0.3);
-    background-color: rgb(202, 200, 200);
-    margin: 10px;
-    width: 100%;
-    height: 1250px;
-    border-radius: 20px;
-    margin: 10px auto 5px auto;
-}
-
-article h1 {
-    text-align: center;
-}
-
-article .contenido {
-    width: 80%;
-    height: 1160px;
-    background-color: rgba(190, 22, 245, 0.3);
-    background-color: rgb(202, 200, 200);
-    text-align: justify;
-    margin: 10px auto 5px auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 60px;
-    font-size: 17px;
-    font-weight: 30px;
-    border-radius: 20px;
+/* ====== Contenido ====== */
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
 }
 
 aside {
-    position: sticky;
-    top: 100px;
-    right: 0;
-    width: 210px;
-    height: 380px;
-    float: right;
+  flex: 1 1 250px;
 }
 
-
-article .contenido aside #menuu {
-    background-color: rgb(202, 200, 200);
-    margin: 10px auto 5px auto;
-    border-radius: 20px;
-    transition: transform 0.3s;
-
+aside img {
+  max-width: 100%;
+  height: auto;
 }
 
-article .contenido aside #menuu ol h1 {
-    color: red;
-
+.hola {
+  flex: 2 1 400px;
 }
 
-footer h3 {
-    font-size: 30px;
-    text-align: center;
-    height: 200px;
-    color: #fafafa;
+/* ====== Texto e imágenes ====== */
+.contenido h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-article .contenido #herramienta {
-    list-style: none;
-    margin: 10px auto 5px auto;
-
+.contenido img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
 }
 
-article .hola {
-    float: right;
-    width: 10px;
-    height: 1050px;
-    background-color: rgb(202, 200, 200);
+/* ====== Herramientas ====== */
+#herramienta h4 {
+  margin-bottom: 10px;
+}
 
+#herramienta ol {
+  list-style: none;
+  padding: 0;
+}
+
+#herramienta li {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* ====== Media Queries ====== */
+@media (max-width: 768px) {
+  .navar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navar ol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenido {
+    flex-direction: column;
+  }
+
+  aside {
+    order: 2;
+  }
+
+  .hola {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navar img {
+    max-height: 40px;
+  }
+
+  .contenido h1 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
 }
