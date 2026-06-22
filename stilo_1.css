@@ -8,16 +8,42 @@
     animation-duration: 0.7s;
 }
 
-@media only screen and (max-width: 600px) {
-    /* Estilos CSS para pantallas menores a 600px */
+@media (max-width: 768px) {
+  .navar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navar ol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenido {
+    flex-direction: column;
+  }
+
+  aside {
+    order: 2;
+  }
+
+  .hola {
+    order: 1;
+  }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    /* Estilos CSS para pantallas entre 600px y 900px */
-}
+@media (max-width: 480px) {
+  .navar img {
+    max-height: 40px;
+  }
 
-@media only screen and (min-width: 900px) {
-    /* Estilos CSS para pantallas mayores a 900px */
+  .contenido h1 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
 }
 
 * {
